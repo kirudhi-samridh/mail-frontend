@@ -1,0 +1,353 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add this CSS to your project's main stylesheet (e.g., App.css) */
+
+.summary-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+}
+.summary-container h4 {
+  font-size: 1.4em;
+  color: #1a365d;
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.summary-container h5 {
+  font-size: 1.1em;
+  color: #4a5568;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.summary-container p {
+  margin-left: 10px;
+  white-space: pre-wrap; /* Preserves line breaks in paragraphs */
+}
+.summary-container em {
+  color: #777;
+  font-style: italic;
+}
+.summary-container .item-list {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.summary-container .item-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #4299e1;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.summary-container .item-card div {
+    margin-bottom: 5px;
+}
+.summary-container .item-card div:last-child {
+    margin-bottom: 0;
+}
+.summary-container .item-card strong {
+    color: #2d3748;
+}
+.summary-container .item-card ul {
+  padding-left: 20px;
+  margin-top: 5px;
+  list-style-type: disc;
+}
+
+/* Add this new class to your App.css file */
+
+.accordion-title {
+  text-transform: capitalize;
+}
+
+/* Custom styles for the email application */
+
+.accordion-container {
+  /* Styles for the accordion container */
+}
+
+.accordion-title {
+  /* Styles for accordion titles */
+  transition: background-color 0.2s ease;
+}
+
+.accordion-title:hover {
+  /* Hover effect for accordion titles */
+}
+
+.original-content-group {
+  /* Styles for the original email content section */
+}
+
+.summary-accordion-group {
+  /* Styles for the summary accordion section */
+}
+
+/* Custom scrollbar for email content */
+.prose::-webkit-scrollbar {
+  width: 6px;
+}
+
+.prose::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.prose::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.prose::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ensure proper spacing in email list */
+.email-list-item {
+  margin-bottom: 0.25rem;
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Daily Digest Specific Styles */
+.daily-digest-modal {
+  backdrop-filter: blur(4px);
+}
+
+.daily-digest-content {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.daily-digest-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.daily-digest-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.daily-digest-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.daily-digest-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Enhanced Summary Container for Daily Digest */
+.summary-container.daily-digest {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 1px solid #cbd5e0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.summary-container.daily-digest h4 {
+  color: #553c9a;
+  border-bottom-color: #9f7aea;
+}
+
+.summary-container.daily-digest .item-card {
+  border-left-color: #9f7aea;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+}
+
+/* Audio button animations */
+.audio-button {
+  transition: all 0.3s ease;
+}
+
+.audio-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.audio-button.playing {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Classification tag enhancements */
+.classification-tag {
+  transition: all 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.classification-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Modal animation */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Button hover effects */
+.btn-hover-lift {
+  transition: all 0.2s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Email list item enhancements */
+.email-list-item:hover .classification-tag {
+  transform: scale(1.05);
+}
+
+.email-list-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Date Picker Styles */
+.daily-digest-modal input[type="date"] {
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.daily-digest-modal input[type="date"]:hover {
+  border-color: #9333ea;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.daily-digest-modal input[type="date"]:focus {
+  border-color: #9333ea;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+}
+
+/* Available Dates Grid */
+.daily-digest-modal .available-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.daily-digest-modal .date-button {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: white;
+  color: #9333ea;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.daily-digest-modal .date-button:hover {
+  background: #f3f4f6;
+  border-color: #9333ea;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Icon Animation */
+.calendar-icon {
+  transition: transform 0.2s ease;
+}
+
+.calendar-icon:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Provider Indicators */
+.provider-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: rgb(59, 130, 246);
+}
+
+.provider-indicator.mixed {
+  background-color: rgba(168, 85, 247, 0.1);
+  color: rgb(168, 85, 247);
+}
+
+/* Email provider icons */
+.email-provider-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.email-provider-icons span {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
